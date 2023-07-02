@@ -110,6 +110,11 @@ ORG !_F+$0081D5
 ORG !_F+$0282FA
         JSL boss_sprite_background
 
+; disable mode 7 if in hex editor
+ORG !_F+$0083FA
+        JSL bg_mode_7
+        BCS $83B2
+
 ; run before dmaing to oam
 ORG !_F+$008449
         JSL update_lagometer

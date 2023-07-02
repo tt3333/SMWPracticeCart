@@ -38,6 +38,9 @@ level_load:
         LDA #$FF
         STA !save_timer_address+2
         
+        LDA #$26
+        STA !statusbar_size
+        
         PLB
         PLP
         

@@ -71,8 +71,10 @@ default_status_bar:
         RTL
 
 ; number of scanlines used by layer 3 in normal level mode
-ORG !_F+$008293
-        db $26
+ORG !_F+$008292
+        LDY !statusbar_size
+ORG !_F+$00835C
+        LDY !statusbar_size
 
 ; relocate calls to above routines
 ORG !_F+$00985A

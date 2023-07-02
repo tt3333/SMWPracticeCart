@@ -47,12 +47,6 @@ ORG !_F+$05C424
 ORG !_F+$01EC36
         db $80
         
-; increase size of status bar
-ORG !_F+$008293
-        db #$26
-ORG !_F+$00835D
-        db #$26
-
 ; disable score and bonus star counters at the level end
 ORG !_F+$05CC10
         dw $CFE9

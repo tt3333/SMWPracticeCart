@@ -50,6 +50,8 @@ level_tick:
         JSR test_reset
         JSR test_run_type
         JSR test_translevel_0_failsafe
+        JSR hex_editor
+        BNE .done
         JSR wait_slowdown
         
     .done:
@@ -2671,6 +2673,7 @@ count_rng_index:
         CLD
         JML !_F+$01AD07
 
+incsrc "hex_editor.asm"
 incsrc "region_differences.asm"
 
 print "inserted ", bytes, "/32768 bytes into bank $15"
