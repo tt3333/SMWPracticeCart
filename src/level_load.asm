@@ -1402,8 +1402,8 @@ stripe_dotsarecool:
         db $FC,$28,$FC,$28,$FC,$28,$FC,$28
         db $FC,$28
 stripe_version:
-        db $53,$37,$00,$0D,$1F,$3C,!version_a,$3C
-        db $24,$3C,!version_b,$3C,$24,$3C,!version_c,$3C,$1D,$3C
+        db $53,$36,$00,$0F,$1F,$3C,!version_a,$3C
+        db $24,$3C,!version_b,$3C,$24,$3C,!version_c,$3C,$1D,$3C,$02,$3C
 stripe_exittypecount:
         db $52,$30,$00,$09,$78,$28,$FC,$28
         db $03,$28,$04,$28,$09,$28
