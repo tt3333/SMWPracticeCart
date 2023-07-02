@@ -15,6 +15,10 @@
 !util_axlr_frame             = $0DA8
 !util_axlr_mask              = $0DAC
 
+; hex editor
+!hex_editor_value            = $0DDB
+!hex_editor_cursor           = $0DDC ; 2 bytes, 16-bit value
+
 ; number of frames dropped this execution frame
 !dropped_frames              = $FB ; 2 bytes, 16-bit value
 ; number of frames used this execution frame (basically !dropped_frames + 1)
@@ -63,7 +67,7 @@
 !load_state_delay            = $40
 
 ; determines when to start scrolling fast through options
-!fast_scroll_timer           = $0EF9
+!fast_scroll_timer           = $0EFF
 !fast_scroll_delay           = $20
 ; timer to display the text on the overworld menu
 !text_timer                  = $0EFA
@@ -111,6 +115,7 @@
 
 ; table for status bar meters
 !statusbar_meters            = $704D50 ; $120 bytes (4x24)x3
+!statusbar_size              = $F7
 !statusbar_layout_ptr        = $F8 ; 3 bytes
 
 ; location of cape interaction table at $1FE2
@@ -226,3 +231,6 @@
 !spliced_run                 = $700007
 ; flag = #$BD if the RTC is available on this system
 !clock_available             = $700009
+; flag = #$BD if address is saved
+!hex_editor_exists           = $70000A
+!hex_editor_address          = $70000B
