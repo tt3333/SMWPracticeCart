@@ -83,11 +83,6 @@ gfx27_hijack:
         JSR $AB42
         RTL
 
-; run on nintendo presents
-ORG !_F+$0093C5
-        JSL nintendo_presents
-        NOP
-
 ; run on temporary fade game modes
 ORG !_F+$009F37
         JSR temp_fade_hijack
